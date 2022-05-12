@@ -54,7 +54,7 @@ for item in base_industry:
         l_zt = df[df['连板数'] == int(zt_item)]['名称']
         l_industry = df_stock[df_stock['涨停分析'].str.contains(item)]['    名称']
         df2[item][zt_item] = "，".join(set(l_zt).intersection(set(l_industry)))
-df2.sort_index(axis=0,ascending=False).to_excel('./data/' + gb_file_name_01)
+df2.sort_index(axis=0,ascending=False).to_excel('./data/' + gb_file_name_01)   #11
 
 """ 
 df2['111'] = ""
